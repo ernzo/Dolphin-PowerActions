@@ -1,5 +1,4 @@
-# Dolphin-PowerActions 1.0 <img src="https://i.imgur.com/Wg1A3Xp.png" alt="Dolphin PowerActions" width="22" height="22">
-
+# Dolphin-PowerActions 1.1 <img src="https://i.imgur.com/Wg1A3Xp.png" alt="Dolphin PowerActions" width="22" height="22">
 
 **Release**: 28 Aug 2024  
 **Author**: [ernzo](https://github.com/ernzo)  
@@ -28,7 +27,7 @@ Fully featured; displays a comprehensive list of file information, including:
 - **Version**, **Magic Number**, **MD5 Hash**, **SHA-1 Hash**, **SHA-256 Hash**, **CRC32 Checksum**, **Encryption**, **Extended Attributes**, **Creation Date**, **Last Modification Date**
 
 <p align="center">
-  <img src="https://i.imgur.com/1El7FOc.png" alt="xfileinfo">
+  <img src="https://i.imgur.com/DPa746V.png" alt="xfileinfo">
 </p>
 
 ## Compatibility
@@ -58,3 +57,4 @@ Tested and working perfectly on Debian (Trixie) with KDE Plasma/Wayland.
 Changelog
 -----------
 	1.0 - First release
+ 	1.1 - Updated file Size fetch method, format & presentation.
