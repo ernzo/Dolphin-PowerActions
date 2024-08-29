@@ -5,12 +5,24 @@ file_path="$1"
 # Format Size
 format_size() {
     local size=$1
+
+    format_with_commas() {
+        local num=$1
+        echo "$num" | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta'
+    }
+
     if [ "$size" -ge 1073741824 ]; then
-        echo "$((size / 1073741824)) GB"
+        local main_size=$(echo "scale=2; $size / 1073741824" | bc | sed 's/\./,/')  # GiB
+        local next_size=$(echo "scale=3; $size / 1048576" | bc | sed 's/\./,/')   # MiB
+        echo "$main_size GiB ($(format_with_commas $(echo "scale=3; $size / 1024" | bc))) KiB)"
     elif [ "$size" -ge 1048576 ]; then
-        echo "$((size / 1048576)) MB"
+        local main_size=$(echo "scale=2; $size / 1048576" | bc | sed 's/\./,/')  # MiB
+        local next_size=$(echo "scale=3; $size / 1024" | bc | sed 's/\./,/')    # KiB
+        echo "$main_size MiB ($(format_with_commas $next_size) KiB)"
     elif [ "$size" -ge 1024 ]; then
-        echo "$((size / 1024)) KB"
+        local main_size=$(echo "scale=2; $size / 1024" | bc | sed 's/\./,/')   # KiB
+        local next_size=$(format_with_commas $size)  # bytes
+        echo "$main_size KiB ($next_size bytes)"
     else
         echo "$size bytes"
     fi
