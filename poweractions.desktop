@@ -1,0 +1,54 @@
+[Desktop Entry]
+Name=Power Actions
+Type=Service
+Icon=poweractions
+MimeType=inode/directory;application/x-executable;application/x-shellscript;application/octet-stream;
+X-KDE-PluginAuthor=ernzo
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+X-KDE-Submenu=Power Actions
+X-KDE-Priority=TopLevel
+X-DBus-StartupType=Multi
+Actions=iHack;xfileinfo;runinkonsole;runasadmin;openasadmin;xpermission;
+
+[Desktop Action iHack]
+Name=iHack™
+Function= Hack Icon
+Icon=poweractions
+InitialPreference=10
+NoDisplay=true
+Exec=
+
+[Desktop Action xfileinfo]
+Name=Extended File Info
+Icon=xfileinfo
+X-KDE-PluginDescription=Show File Information
+InitialPreference=9
+Exec=bash -c '~/scripts/PowerActions/xfileinfo.sh "%u"'
+
+[Desktop Action runinkonsole]
+Name=Run in Konsole
+Icon=utilities-terminal
+X-KDE-PluginDescription=Run in Konsole
+InitialPreference=8
+Exec=konsole --hold -e ~/scripts/PowerActions/runinkonsole.sh %F
+
+[Desktop Action runasadmin]
+Name=Run as Admin
+Icon=utilities-terminal
+X-KDE-PluginDescription=Run as Admin
+InitialPreference=7
+Exec=~/scripts/PowerActions/runasadmin.sh %F
+
+[Desktop Action openasadmin]
+Name=Open as Admin
+Icon=openasadmin
+X-KDE-PluginDescription=Open as Admin
+InitialPreference=6
+Exec=~/scripts/PowerActions/openasadmin.sh %F
+
+[Desktop Action xpermission]
+Name=Add Execute Permission
+Icon=application-x-pem-key
+X-KDE-PluginDescription=Add Execute Permission
+InitialPreference=5
+Exec=konsole --hold -e bash -c '~/scripts/PowerActions/xpermission.sh %F'
