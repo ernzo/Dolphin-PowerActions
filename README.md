@@ -1,4 +1,4 @@
-# Dolphin-PowerActions 1.1 <img src="https://i.imgur.com/Wg1A3Xp.png" alt="Dolphin PowerActions" width="22" height="22">
+# Dolphin-PowerActions 1.2 <img src="https://i.imgur.com/Wg1A3Xp.png" alt="Dolphin PowerActions" width="22" height="22">
 
 **Release**: 28 Aug 2024  
 **Author**: [ernzo](https://github.com/ernzo)  
@@ -58,3 +58,4 @@ Changelog
 -----------
 	1.0 - First release
  	1.1 - Updated file Size fetch method, format & presentation.
+  	1.2 - Execution Permissoin: Added check to retry action with sudo if adding permission fails.
