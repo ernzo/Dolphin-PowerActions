@@ -30,7 +30,7 @@ Name=Run in Konsole
 Icon=utilities-terminal
 X-KDE-PluginDescription=Run in Konsole
 InitialPreference=8
-Exec=konsole --hold -e ~/scripts/PowerActions/runinkonsole.sh %F
+Exec=konsole --hold -e '~/scripts/PowerActions/runinkonsole.sh %F'
 
 [Desktop Action runasadmin]
 Name=Run as Admin
