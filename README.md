@@ -4,7 +4,7 @@
 **Author**: [ernzo](https://github.com/ernzo)  
 **Repository**: [Dolphin-PowerActions](https://github.com/ernzo/Dolphin-PowerActions)
 
-A collection of Action scripts to extend [Dolphin](https://github.com/KDE/dolphin)'s functionality.
+Collection of Action scripts to extend [Dolphin](https://github.com/KDE/dolphin)'s functionality.
 
 ## PowerActions Features
 
@@ -27,7 +27,7 @@ Fully featured; displays a comprehensive list of file information, including:
 - **Version**, **Magic Number**, **MD5 Hash**, **SHA-1 Hash**, **SHA-256 Hash**, **CRC32 Checksum**, **Encryption**, **Extended Attributes**, **Creation Date**, **Last Modification Date**
 
 <p align="center">
-  <img src="https://i.imgur.com/DPa746V.png" alt="xfileinfo">
+  <img src="https://i.imgur.com/2gt1GaP.png" alt="xfileinfo">
 </p>
 
 ## Compatibility
