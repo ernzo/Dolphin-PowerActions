@@ -58,4 +58,4 @@ Changelog
 -----------
 	1.0 - First release
  	1.1 - Updated file Size fetch method, format & presentation.
-  	1.2 - Execution Permissoin: Added check to retry action with sudo if adding permission fails.
+  	1.2 - Execution Permission: Added check to retry action with sudo if adding permission fails.
