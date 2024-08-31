@@ -12,7 +12,7 @@ Actions=iHack;xfileinfo;runinkonsole;runasadmin;openasadmin;xpermission;
 
 [Desktop Action iHack]
 Name=iHack™
-Function= Hack Icon
+Function= Hack Icon #Don't tell no one ;)
 Icon=poweractions
 InitialPreference=10
 NoDisplay=true
