@@ -27,7 +27,7 @@ Fully featured; displays a comprehensive list of file information, including:
 - **Version**, **Magic Number**, **MD5 Hash**, **SHA-1 Hash**, **SHA-256 Hash**, **CRC32 Checksum**, **Encryption**, **Extended Attributes**, **Creation Date**, **Last Modification Date**
 
 <p align="center">
-  <img src="https://i.imgur.com/2gt1GaP.png" alt="xfileinfo">
+  <img src="https://i.imgur.com/42eHUls.png" alt="xfileinfo">
 </p>
 
 ## Compatibility
@@ -59,4 +59,5 @@ Changelog
 	1.0 - First release
  	1.1 - Updated file Size fetch method, format & presentation.
   	1.2 - Execution Permission: Added check to retry action with sudo if adding permission fails.
-   	1.3 - Extended File Info: Added file Visibility and Lock status, adjusted time/date format. // Execution Permission: Adjusted process presentation.
+   	1.3 - Extended File Info: Added file Visibility and Lock status, adjusted time/date format.
+	Execution Permission: Adjusted process presentation.
