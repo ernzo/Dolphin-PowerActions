@@ -27,7 +27,7 @@ Fully featured; displays a comprehensive list of file information, including:
 - **Version**, **Magic Number**, **MD5 Hash**, **SHA-1 Hash**, **SHA-256 Hash**, **CRC32 Checksum**, **Encryption**, **Extended Attributes**, **Creation Date**, **Last Modification Date**
 
 <p align="center">
-  <img src="https://i.imgur.com/42eHUls.png" alt="xfileinfo">
+  <img src="https://i.imgur.com/uI9lVy3.png" alt="xfileinfo">
 </p>
 
 ## Compatibility
