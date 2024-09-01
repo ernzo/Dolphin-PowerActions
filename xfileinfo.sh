@@ -36,7 +36,7 @@ file_size=$(stat -c%s "$file_path")
 formatted_size=$(format_size "$file_size")
 file_permissions=$(stat -c%A "$file_path")
 file_owner=$(stat -c%U "$file_path")
-file_mod_time=$(stat -c%y "$file_path")
+file_mod_time=$(date -d "$(stat -c %y "$file_path")" '+%Y-%m-%d %H:%M:%S %Z')
 
 # Creation Date
 file_creation_date=$(stat -c%W "$file_path" 2>/dev/null)
@@ -93,5 +93,22 @@ fi
 # Extended Attributes
 xattrs=$(getfattr -d "$file_path" 2>/dev/null || echo "None")
 
+# Determine visibility
+if [[ "$file_name" =~ ^\. ]]; then
+    file_visibility="Hidden"
+else
+    file_visibility="Visible"
+fi
+
+# Determine lock status
+if [ -w "$file_path" ]; then
+    file_lock_status="Unlocked"
+else
+    file_lock_status="Locked"
+fi
+
+# Combine status
+file_status="$file_lock_status - $file_visibility"
+
 # Display Info
-kdialog --title "Extended File Information" --msgbox "File: $file_name\nPath: $file_path\n\nFile Type: $file_type\nMIME Type: $file_encoding\nEncoding: $file_encoding\nSize: $formatted_size\nOwner: $file_owner\nPermissions: $file_permissions\n\nVersion: ${file_version:-N/A}\nMagic Number: ${file_magic_number:-N/A}\nMD5 Hash: $md5_hash\nSHA-1 Hash: $sha1_hash\nSHA-256 Hash: $sha256_hash\nCRC32 CKS: ${crc32_checksum:-N/A}\nEncryption: $encrypted_status\nExtended Attributes: ${xattrs:-None}\nCreation Date: $file_creation_date\nLast Modification: $file_mod_time"
+kdialog --title "Extended File Information" --msgbox "File: $file_name\nPath: $file_path\n\nFile Type: $file_type\nMIME Type: $file_encoding\nEncoding: $file_encoding\nSize: $formatted_size\nOwner: $file_owner\nPermissions: $file_permissions\nStatus: $file_status\n\nVersion: ${file_version:-N/A}\nMagic Number: ${file_magic_number:-N/A}\nMD5 Hash: $md5_hash\nSHA-1 Hash: $sha1_hash\nSHA-256 Hash: $sha256_hash\nCRC32 CKS: ${crc32_checksum:-N/A}\nEncryption: $encrypted_status\nExtended Attributes: ${xattrs:-None}\nCreation Date: $file_creation_date\nLast Modification: $file_mod_time"
