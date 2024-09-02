@@ -1,4 +1,4 @@
-# Dolphin-PowerActions 1.3 <img src="https://i.imgur.com/Wg1A3Xp.png" alt="Dolphin PowerActions" width="23" height="23">
+# Dolphin-PowerActions 1.5 <img src="https://i.imgur.com/Wg1A3Xp.png" alt="Dolphin PowerActions" width="23" height="23">
 
 **Release**: 28 Aug 2024  
 **Author**: [ernzo](https://github.com/ernzo)  
@@ -10,7 +10,7 @@ Collection of Action scripts to extend [Dolphin](https://github.com/KDE/dolphin)
 
 - **Open as Admin**: Opens folder in a new Dolphin window with elevated privileges.
 - **Run as Admin**: Runs selected file as Administrator in Konsole.
-- **Run in Konsole**: Runs selected file in Konsole.
+- **Run in Terminal**: Runs selected file in Terminal.
 - **Extended File Info**: Displays detailed file information.
 - **Add Execute Permission**: Adds Execute Permission to selected file/s.
 
