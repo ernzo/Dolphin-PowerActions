@@ -8,7 +8,7 @@ X-KDE-ServiceTypes=KonqPopupMenu/Plugin
 X-KDE-Submenu=Power Actions
 X-KDE-Priority=TopLevel
 X-DBus-StartupType=Multi
-Actions=iHack;xfileinfo;runinkonsole;runasadmin;openasadmin;xpermission;
+Actions=iHack;xfileinfo;runinterm;runasadmin;openasadmin;xpermission;
 
 [Desktop Action iHack]
 Name=iHack™
@@ -25,12 +25,13 @@ X-KDE-PluginDescription=Show File Information
 InitialPreference=9
 Exec=bash -c '~/scripts/PowerActions/xfileinfo.sh "%u"'
 
-[Desktop Action runinkonsole]
-Name=Run in Konsole
+[Desktop Action runinterm]
+Name=Run in Terminal
 Icon=utilities-terminal
-X-KDE-PluginDescription=Run in Konsole
+Terminal=false
+X-KDE-PluginDescription=Run in Terminal
 InitialPreference=8
-Exec=konsole --hold -e '~/scripts/PowerActions/runinkonsole.sh %F'
+Exec=x-terminal-emulator -e '/bin/bash -c "~/scripts/PowerActions/runinterm.sh %F; exec $SHELL"'
 
 [Desktop Action runasadmin]
 Name=Run as Admin
@@ -51,4 +52,4 @@ Name=Add Execute Permission
 Icon=application-x-pem-key
 X-KDE-PluginDescription=Add Execute Permission
 InitialPreference=5
-Exec=konsole --hold -e bash -c '~/scripts/PowerActions/xpermission.sh %F'
+Exec=x-terminal-emulator -e bash -c '~/scripts/PowerActions/xpermission.sh %F; echo -n "Closing Terminal in "; for i in {10..0}; do echo -ne "\rClosing Terminal in $i seconds.."; sleep 1; done; echo -ne "\rClosing Terminal in Done!"'
