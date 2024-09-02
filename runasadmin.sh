@@ -1,11 +1,18 @@
 #!/bin/bash
-# Run as Admin
 
-# Append user's PATH/s
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH
+# Check file
+if [ -z "$1" ]; then
+  echo "No file provided. Usage: runasadmin.sh <file>"
+  exit 1
+fi
 
-# Run command, preserve env vars
-pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY bash -c "konsole --hold -e $1"
+FILE="$1"
 
-#Alternative dbus command:
-#pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY dbus-launch konsole --hold -e "$1"
+# File exists?
+if [ ! -f "$FILE" ]; then
+  echo "File does not exist: $FILE"
+  exit 1
+fi
+
+# Run file as admin, preserve environment, keep the terminal open
+x-terminal-emulator -e "sudo -E bash \"$FILE\"; exec bash"
