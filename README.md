@@ -15,7 +15,7 @@ Collection of Action scripts to extend [Dolphin](https://github.com/KDE/dolphin)
 - **Add Execute Permission**: Adds Execute Permission to selected file/s.
 
 <p align="center">
-  <img src="https://i.imgur.com/lLXSffR.png" alt="Dolphin PowerActions">
+  <img src="https://i.imgur.com/53nWCWD.png" alt="Dolphin PowerActions">
 </p>
 
 ## Extended File Info
