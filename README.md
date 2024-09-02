@@ -61,3 +61,6 @@ Changelog
   	1.2 - Execution Permission: Added check to retry action with sudo if adding permission fails.
    	1.3 - Extended File Info: Added file Visibility and Lock status, adjusted time/date format.
 	Execution Permission: Adjusted process presentation.
+	1.4 - Changed "Run in Konsole" command to execute in Terminal emulator, renamed it accordingly;
+ 	Execution Permission: Added auto window closing countdown.
+	1.5 - Changed "Run as Admin" command to execute in Terminal emulator.
