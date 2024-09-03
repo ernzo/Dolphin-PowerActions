@@ -23,7 +23,7 @@ Collection of Action scripts to extend [Dolphin](https://github.com/KDE/dolphin)
 Fully featured; displays a comprehensive list of file information, including:
 
 - **File Name**, **Path**
-- **File Type**, **MIME Type**, **Encoding**, **Size**, **Owner**, **Permissions**
+- **File Type**, **MIME Type**, **Encoding**, **Size**, **Owner**, **Permissions**, **Lock** & **Visibility**
 - **Version**, **Magic Number**, **MD5 Hash**, **SHA-1 Hash**, **SHA-256 Hash**, **CRC32 Checksum**, **Encryption**, **Extended Attributes**, **Creation Date**, **Last Modification Date**
 
 <p align="center">
