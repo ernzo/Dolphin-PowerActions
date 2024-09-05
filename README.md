@@ -1,4 +1,4 @@
-# Dolphin-PowerActions 1.5 <img src="https://i.imgur.com/Wg1A3Xp.png" alt="Dolphin PowerActions" width="23" height="23">
+# Dolphin-PowerActions 1.6 <img src="https://i.imgur.com/Wg1A3Xp.png" alt="Dolphin PowerActions" width="23" height="23">
 
 **Release**: 28 Aug 2024  
 **Author**: [ernzo](https://github.com/ernzo)  
@@ -64,3 +64,4 @@ Changelog
 	1.4 - Changed "Run in Konsole" command to execute in Terminal emulator, renamed it accordingly;
  	Execution Permission: Added auto window closing countdown.
 	1.5 - Changed "Run as Admin" command to execute in Terminal emulator.
+	1.6 - Updated XPermissions, "Run in Term" and "Run as Admin" to better handle special paths.
