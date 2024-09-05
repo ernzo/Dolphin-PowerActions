@@ -142,6 +142,9 @@ file_permissions=$(stat -c%A "$file_path")
 file_owner=$(stat -c%U "$file_path")
 file_mod_time=$(date -d "$(stat -c %y "$file_path")" '+%Y-%m-%d %H:%M:%S %Z')
 
+# Extended Attributes
+xattrs=$(getfattr -d "$file_path" 2>/dev/null || echo "None")
+
 # Creation Date
 file_creation_date=$(stat -c%W "$file_path" 2>/dev/null)
 if [ "$file_creation_date" -eq 0 ] 2>/dev/null; then
@@ -204,6 +207,7 @@ info+="SHA1 Hash: $(retrieve_cache "sha1_hash")\n"
 info+="SHA256 Hash: $(retrieve_cache "sha256_hash")\n"
 info+="CRC32 Checksum: $(retrieve_cache "crc32_checksum")\n"
 info+="Encryption Status: $(retrieve_cache "encrypted_status")\n"
+info+="Extended Attributes: $xattrs\n"
 info+="Creation Date: $file_creation_date\n"
 info+="Last Modification: $file_mod_time"
 
