@@ -31,14 +31,14 @@ Icon=utilities-terminal
 Terminal=false
 X-KDE-PluginDescription=Run in Terminal
 InitialPreference=8
-Exec=x-terminal-emulator -e '/bin/bash -c "~/scripts/PowerActions/runinterm.sh %F; exec $SHELL"'
+Exec=x-terminal-emulator -e bash -c '~/scripts/PowerActions/runinterm.sh "%U"; exec $SHELL'
 
 [Desktop Action runasadmin]
 Name=Run as Admin
 Icon=utilities-terminal
 X-KDE-PluginDescription=Run as Admin
 InitialPreference=7
-Exec=~/scripts/PowerActions/runasadmin.sh %F
+Exec=x-terminal-emulator -e bash -c '~/scripts/PowerActions/runasadmin.sh "%U"; exec $SHELL'
 
 [Desktop Action openasadmin]
 Name=Open as Admin
@@ -52,4 +52,4 @@ Name=Add Execute Permission
 Icon=application-x-pem-key
 X-KDE-PluginDescription=Add Execute Permission
 InitialPreference=5
-Exec=x-terminal-emulator -e bash -c '~/scripts/PowerActions/xpermission.sh %F; echo -n "Closing Terminal in "; for i in {10..0}; do echo -ne "\rClosing Terminal in $i seconds.."; sleep 1; done; echo -ne "\rClosing Terminal in Done!"'
+Exec=x-terminal-emulator -e bash -c '~/scripts/PowerActions/xpermission.sh "%U"; echo -n "Closing Terminal in "; for i in {10..0}; do echo -ne "\rClosing Terminal in $i seconds.."; sleep 1; done; echo -ne "\rClosing Terminal in Done!"'
