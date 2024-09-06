@@ -1,4 +1,4 @@
-# Dolphin-PowerActions 1.6 <img src="https://i.imgur.com/Wg1A3Xp.png" alt="Dolphin PowerActions" width="23" height="23">
+# Dolphin-PowerActions 1.7 <img src="https://i.imgur.com/Wg1A3Xp.png" alt="Dolphin PowerActions" width="23" height="23">
 
 **Release**: 28 Aug 2024  
 **Author**: [ernzo](https://github.com/ernzo)  
