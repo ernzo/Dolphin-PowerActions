@@ -54,9 +54,9 @@ Tested and working perfectly on Debian (Trixie) with KDE Plasma/Wayland.
    cd /home/USER/.local/share/kservices5/ServiceMenus/
    chmod 644 poweractions.desktop
 
-4. **Install Dependencies (Optional)**
+4. **Install Dependencies**
    
-   Optionally, make sure all dependencies required by "Extended File Info" are installed:
+   Make sure all dependencies required by "Extended File Info" are installed:
    ```bash
    sudo apt-get update
    sudo apt-get install xxd bc rpm snapd exiftool
