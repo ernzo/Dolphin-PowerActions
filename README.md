@@ -54,6 +54,13 @@ Tested and working perfectly on Debian (Trixie) with KDE Plasma/Wayland.
    cd /home/USER/.local/share/kservices5/ServiceMenus/
    chmod 644 poweractions.desktop
 
+4. **Install Dependencies (Optional)**
+   
+   Optionally, make sure all dependencies required by "Extended File Info" are installed:
+   ```bash
+   sudo apt-get update
+   sudo apt-get install xxd bc rpm snapd exiftool
+
 Changelog
 -----------
 	1.0 - First release
@@ -65,3 +72,6 @@ Changelog
  	Execution Permission: Added auto window closing countdown.
 	1.5 - Changed "Run as Admin" command to execute in Terminal emulator.
 	1.6 - Updated XPermissions, "Run in Term" and "Run as Admin" to better handle special paths.
+	1.7 - Extended File Info: Added data Caching and limited Entropy estimation to 10MB sample for better performance; 
+	improved Encryption detection logic, added Shannon method; improved Version detection method for deb, rpm, snap, appimage packages and exe files; 
+	improved Magic Number fetching; streamlined kdialog command formatting, added/improved debugging checks.
