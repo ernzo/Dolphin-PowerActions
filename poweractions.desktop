@@ -52,4 +52,4 @@ Name=Add Execute Permission
 Icon=application-x-pem-key
 X-KDE-PluginDescription=Add Execute Permission
 InitialPreference=5
-Exec=x-terminal-emulator -e bash -c '~/scripts/PowerActions/xpermission.sh "%U"; echo -n "Closing Terminal in "; for i in {10..0}; do echo -ne "\rClosing Terminal in $i seconds.."; sleep 1; done; echo -ne "\rClosing Terminal in Done!"'
+Exec=x-terminal-emulator -e bash -c 'for f in "$@"; do ~/scripts/PowerActions/xpermission.sh "$f"; done; echo -n "Closing Terminal in "; for i in {10..0}; do echo -ne "\rClosing Terminal in $i seconds.."; sleep 1; done; echo -ne "\rClosing Terminal in Done!"' _ %U
