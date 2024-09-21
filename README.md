@@ -1,4 +1,4 @@
-# Dolphin-PowerActions 1.7 <img src="https://i.imgur.com/Wg1A3Xp.png" alt="Dolphin PowerActions" width="23" height="23">
+# Dolphin-PowerActions 1.8 <img src="https://i.imgur.com/Wg1A3Xp.png" alt="Dolphin PowerActions" width="23" height="23">
 
 **Release**: 28 Aug 2024  
 **Author**: [ernzo](https://github.com/ernzo)  
@@ -75,3 +75,4 @@ Changelog
 	1.7 - Extended File Info: Added data Caching and limited Entropy estimation to 10MB sample for better performance; 
 	improved Encryption detection logic, added Shannon method; improved Version detection method for deb, rpm, snap, appimage packages and exe files; 
 	improved Magic Number fetching; streamlined kdialog command formatting, added/improved debugging checks.
+ 	1.8 - Updated XPermissions fetch method to better handle multiple files with special paths.
