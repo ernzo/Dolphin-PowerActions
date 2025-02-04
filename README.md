@@ -43,6 +43,9 @@ Tested and working perfectly on Debian (Trixie) with KDE Plasma/Wayland.
    - Copy `poweractions.desktop` to `/home/USER/.local/share/kservices5/ServiceMenus/`.
    - Alternatively, copy it to `/usr/share/kservices5/ServiceMenus/` for a system-wide application.
 
+   - For KDE Plasma 6 / Dolphin v.24 and up > Copy .desktop file to `/home/USER/.local/share/kio/servicemenus/`
+   or `/usr/share/kio/servicemenus` for a system-wide application.
+
 3. **Copy the Icons**
    - Copy `poweractions.png`, `openasadmin.png`, and `xfileinfo.png` to `/usr/share/icons/`
 
