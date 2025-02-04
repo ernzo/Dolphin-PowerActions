@@ -9,7 +9,7 @@ Collection of Action scripts to extend [Dolphin](https://github.com/KDE/dolphin)
 ## PowerActions Features
 
 - **Open as Admin**: Opens folder in a new Dolphin window with elevated privileges.
-- **Run as Admin**: Runs selected file as Administrator in Konsole.
+- **Run as Admin**: Runs selected file as Administrator in Terminal.
 - **Run in Terminal**: Runs selected file in Terminal.
 - **Extended File Info**: Displays detailed file information.
 - **Add Execute Permission**: Adds Execute Permission to selected file/s.
