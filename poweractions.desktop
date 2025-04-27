@@ -6,12 +6,14 @@ MimeType=inode/directory;application/x-executable;application/x-shellscript;appl
 X-KDE-PluginAuthor=ernzo
 X-KDE-ServiceTypes=KonqPopupMenu/Plugin
 X-KDE-Submenu=Power Actions
+X-KDE-Submenu[nl]=Acties voor gevorderden
 X-KDE-Priority=TopLevel
 X-DBus-StartupType=Multi
 Actions=iHack;xfileinfo;runinterm;runasadmin;openasadmin;xpermission;
 
 [Desktop Action iHack]
 Name=iHack™
+Name[nl]=iHack™
 Function= Hack Icon #Don't tell no one ;)
 Icon=poweractions
 InitialPreference=10
@@ -20,36 +22,46 @@ Exec=
 
 [Desktop Action xfileinfo]
 Name=Extended File Info
+Name[nl]=Uitgebreide bestandsinformatie
 Icon=xfileinfo
 X-KDE-PluginDescription=Show File Information
+X-KDE-PluginDescription[nl]=Toon bestandsinformatie
 InitialPreference=9
 Exec=bash -c '~/scripts/PowerActions/xfileinfo.sh "%u"'
 
 [Desktop Action runinterm]
 Name=Run in Terminal
+Name[nl]=Uitvoeren in terminalvenster
 Icon=utilities-terminal
 Terminal=false
 X-KDE-PluginDescription=Run in Terminal
+X-KDE-PluginDescription[nl]=Voer uit in een terminalvenster
 InitialPreference=8
 Exec=x-terminal-emulator -e bash -c '~/scripts/PowerActions/runinterm.sh "%U"; exec $SHELL'
 
 [Desktop Action runasadmin]
 Name=Run as Admin
+Name[nl]=Uitvoeren als beheerder
 Icon=utilities-terminal
 X-KDE-PluginDescription=Run as Admin
+X-KDE-PluginDescription[nl]=Voer uit als beheerder (root)
 InitialPreference=7
 Exec=x-terminal-emulator -e bash -c '~/scripts/PowerActions/runasadmin.sh "%U"; exec $SHELL'
 
 [Desktop Action openasadmin]
 Name=Open as Admin
+Name[nl]=Openen als beheerder
 Icon=openasadmin
 X-KDE-PluginDescription=Open as Admin
+X-KDE-PluginDescription[nl]=Open als beheerder (root)
 InitialPreference=6
 Exec=~/scripts/PowerActions/openasadmin.sh %F
 
 [Desktop Action xpermission]
 Name=Add Execute Permission
+Name[nl]=Uitvoerrecht toekennen
 Icon=application-x-pem-key
 X-KDE-PluginDescription=Add Execute Permission
+X-KDE-PluginDescription[nl]=Ken het recht toe om dit bestand uit te voeren
 InitialPreference=5
 Exec=x-terminal-emulator -e bash -c 'for f in "$@"; do ~/scripts/PowerActions/xpermission.sh "$f"; done; echo -n "Closing Terminal in "; for i in {10..0}; do echo -ne "\rClosing Terminal in $i seconds.."; sleep 1; done; echo -ne "\rClosing Terminal in Done!"' _ %U
